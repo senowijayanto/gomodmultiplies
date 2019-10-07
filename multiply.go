@@ -13,6 +13,15 @@ func Multiply(items ...interface{}) int64 {
 	return res
 }
 
+// MultiplyInt function for multiply numbers with integer params
+func MultiplyInt(items ...int) int64 {
+	res := 1
+	for _, item := range items {
+		res *= item
+	}
+	return int64(res)
+}
+
 // convertToInt64 is a function to convert numbers into interger 64
 func convertToInt64(data interface{}) int64 {
 	if data == nil {
